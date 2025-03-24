@@ -1,13 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { promises as fs } from 'fs';
-import path from 'path';
 import { randomUUID } from 'crypto';
+import dbConnect from '@/lib/db';
+import Image from '@/models/Image';
 
 export async function POST(req: NextRequest) {
   try {
-    // Since formidable doesn't work directly with NextRequest, we'll use a different approach
-    // Instead of using formidable, we'll manually handle the file upload
-    
     // Get the form data
     const formData = await req.formData();
     const file = formData.get('image') as File;
@@ -31,18 +28,28 @@ export async function POST(req: NextRequest) {
     // Create a unique filename
     const fileExtension = file.name.split('.').pop();
     const fileName = `${randomUUID()}.${fileExtension}`;
-    const filePath = path.join(process.cwd(), 'public/uploads', fileName);
     
-    // Convert the file to a Buffer and save it
+    // Convert the file to a Buffer
     const buffer = Buffer.from(await file.arrayBuffer());
-    await fs.writeFile(filePath, buffer);
     
-    // Return the URL to the uploaded file
-    const fileUrl = `/uploads/${fileName}`;
+    // Connect to the database
+    await dbConnect();
+    
+    // Save the image to MongoDB
+    const newImage = new Image({
+      filename: fileName,
+      contentType: file.type,
+      data: buffer
+    });
+    
+    await newImage.save();
+    
+    // Return the URL to the image API endpoint
+    const imageUrl = `/api/images/${fileName}`;
     
     return NextResponse.json({ 
       success: true,
-      url: fileUrl
+      url: imageUrl
     });
   } catch (error) {
     console.error('Error uploading file:', error);
