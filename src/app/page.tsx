@@ -100,8 +100,8 @@ export default function Home() {
         {/* Header Section */}
         <div className="flex justify-between items-center mb-6">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-1 font-press-start-2p">GoFundDream</h1>
-            <p className="text-gray-500 text-sm">The platform where you have the power to bring someone's dream to life</p>
+            <h1 className="text-2xl font-bold text-gray-900 mb-1 font-press-start-2p">梦想众筹</h1>
+            <p className="text-gray-500 text-sm">一个让您有能力实现他人梦想的平台</p>
           </div>
           
           <button 
@@ -111,7 +111,7 @@ export default function Home() {
             <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
             </svg>
-            <span className="font-press-start-2p text-[10px]">{isConnected ? 'Create Dream' : 'Connect to Create'}</span>
+            <span className="font-press-start-2p text-[10px]">{isConnected ? '创建梦想' : '连接钱包'}</span>
           </button>
         </div>
             
@@ -119,26 +119,26 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
               <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center justify-center">
                 <div className="text-3xl font-bold text-blue-600 mb-1">{stats.totalCount}</div>
-                <div className="text-sm text-gray-600">Total Dreams</div>
+                <div className="text-sm text-gray-600">梦想总数</div>
               </div>
               
               <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center justify-center">
                 <div className="text-3xl font-bold text-green-600 mb-1">{stats.completedCount}</div>
-                <div className="text-sm text-gray-600">Completed Dreams</div>
+                <div className="text-sm text-gray-600">已完成梦想</div>
               </div>
               
               <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center justify-center">
                 <div className="text-3xl font-bold text-purple-600 mb-1">
                   {stats.totalFunding}
                 </div>
-                <div className="text-sm text-gray-600">Total BSC Funded</div>
+                <div className="text-sm text-gray-600">BSC总资金</div>
               </div>
               
               <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center justify-center">
                 <div className="text-3xl font-bold text-orange-600 mb-1">
                   {stats.uniqueCreatorsCount}
                 </div>
-                <div className="text-sm text-gray-600">Unique Creators</div>
+                <div className="text-sm text-gray-600">独立创作者</div>
               </div>
             </div>
             
@@ -161,11 +161,11 @@ export default function Home() {
               <div className="mb-6">
                 <div className="flex items-center mb-4">
                   <div className="w-2 h-8 bg-blue-500 rounded-full mr-3"></div>
-                  <h2 className="text-xl font-bold text-gray-800 font-press-start-2p">New Dreams</h2>
+                  <h2 className="text-xl font-bold text-gray-800 font-press-start-2p">新梦想</h2>
                 </div>
                 
                 <div className="bg-gray-50 p-3 rounded-lg border border-gray-200 flex flex-wrap gap-2">
-                  <div className="text-sm font-medium text-gray-700 mr-2 flex items-center">Filter by:</div>
+                  <div className="text-sm font-medium text-gray-700 mr-2 flex items-center">筛选条件：</div>
                   <button 
                     onClick={() => handleSortChange('createdAt', 'desc')}
                     className={`px-4 py-2 text-sm font-medium rounded-lg border ${
@@ -174,7 +174,7 @@ export default function Home() {
                         : 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100'
                     }`}
                   >
-                    Newest First
+                    最新优先
                   </button>
                   <button 
                     onClick={() => handleSortChange('createdAt', 'asc')}
@@ -184,7 +184,7 @@ export default function Home() {
                         : 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100'
                     }`}
                   >
-                    Oldest First
+                    最早优先
                   </button>
                   <button 
                     onClick={() => handleSortChange('fundingGoal', 'desc')}
@@ -194,7 +194,7 @@ export default function Home() {
                         : 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100'
                     }`}
                   >
-                    BSC: High to Low
+                    BSC：从高到低
                   </button>
                   <button 
                     onClick={() => handleSortChange('fundingGoal', 'asc')}
@@ -204,7 +204,7 @@ export default function Home() {
                         : 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100'
                     }`}
                   >
-                    BSC: Low to High
+                    BSC：从低到高
                   </button>
                 </div>
               </div>
@@ -231,7 +231,7 @@ export default function Home() {
                           e.stopPropagation();
                           e.preventDefault();
                           const creatorShort = `${dream.creator.substring(0, 6)}...${dream.creator.substring(dream.creator.length - 4)}`;
-                          const tweetText = `I just funded ${creatorShort} dream on GoFundDream!\n\nCheck it out:`;
+                          const tweetText = `我刚刚为${creatorShort}的梦想提供了资金！\n\n查看详情:`;
                           // Use absolute URL for production compatibility
                           const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin;
                           const tweetUrl = `${baseUrl}/dreams/${dream._id}`;
@@ -286,12 +286,12 @@ export default function Home() {
                         </div>
                         <div className="flex flex-col space-y-1 mt-2">
                           <div className="text-xs text-gray-500">
-                            <span className="font-medium">Creator: </span>
+                            <span className="font-medium">创建者: </span>
                             {dream.creator.substring(0, 6)}...{dream.creator.substring(dream.creator.length - 4)}
                           </div>
                           {dream.telegram && (
                             <div className="text-xs text-gray-500">
-                              <span className="font-medium">Telegram: </span>
+                              <span className="font-medium">电报: </span>
                               <span className="text-blue-600">
                                 {dream.telegram}
                               </span>
@@ -304,7 +304,7 @@ export default function Home() {
                   ))
                 ) : (
                   <div className="col-span-full text-center py-8">
-                    <p className="text-gray-500">No active dreams yet</p>
+                    <p className="text-gray-500">暂无活跃梦想</p>
                   </div>
                 )}
               </div>
@@ -314,7 +314,7 @@ export default function Home() {
             <div>
               <div className="flex items-center mb-6">
                 <div className="w-2 h-8 bg-green-500 rounded-full mr-3"></div>
-                <h2 className="text-xl font-bold text-gray-800 font-press-start-2p">Completed Dreams</h2>
+                <h2 className="text-xl font-bold text-gray-800 font-press-start-2p">已完成梦想</h2>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -330,7 +330,7 @@ export default function Home() {
                           e.stopPropagation();
                           e.preventDefault();
                           const creatorShort = `${dream.creator.substring(0, 6)}...${dream.creator.substring(dream.creator.length - 4)}`;
-                          const tweetText = `I just funded ${creatorShort} dream on GoFundDream!\n\nCheck it out:`;
+                          const tweetText = `我刚刚为${creatorShort}的梦想提供了资金！\n\n查看详情:`;
                           // Use absolute URL for production compatibility
                           const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin;
                           const tweetUrl = `${baseUrl}/dreams/${dream._id}`;
@@ -385,12 +385,12 @@ export default function Home() {
                         </div>
                         <div className="flex flex-col space-y-1 mt-2">
                           <div className="text-xs text-gray-500">
-                            <span className="font-medium">Creator: </span>
+                            <span className="font-medium">创建者: </span>
                             {dream.creator.substring(0, 6)}...{dream.creator.substring(dream.creator.length - 4)}
                           </div>
                           {dream.telegram && (
                             <div className="text-xs text-gray-500">
-                              <span className="font-medium">Telegram: </span>
+                              <span className="font-medium">电报: </span>
                               <span className="text-blue-600">
                                 {dream.telegram}
                               </span>
@@ -403,7 +403,7 @@ export default function Home() {
                   ))
                 ) : (
                   <div className="col-span-full text-center py-8">
-                    <p className="text-gray-500">No completed dreams yet</p>
+                    <p className="text-gray-500">暂无已完成梦想</p>
                   </div>
                 )}
               </div>
@@ -416,8 +416,8 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
               </svg>
             </div>
-            <h3 className="text-lg font-medium text-gray-800 mb-1">No dreams yet</h3>
-            <p className="text-sm text-gray-500 mb-4">Be the first to create a dream!</p>
+            <h3 className="text-lg font-medium text-gray-800 mb-1">暂无梦想</h3>
+            <p className="text-sm text-gray-500 mb-4">成为第一个创建梦想的人！</p>
             
             <button 
               onClick={isConnected ? () => window.location.href = '/dreams/create' : connectWallet}
@@ -426,7 +426,7 @@ export default function Home() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
               </svg>
-              <span className="font-press-start-2p text-[10px]">{isConnected ? 'Create Dream' : 'Connect to Create'}</span>
+              <span className="font-press-start-2p text-[10px]">{isConnected ? '创建梦想' : '连接钱包'}</span>
             </button>
           </div>
         )}

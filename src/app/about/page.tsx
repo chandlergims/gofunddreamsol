@@ -3,60 +3,56 @@ export default function AboutPage() {
     <div className="bg-white min-h-screen">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-2xl font-bold text-gray-900 mb-6 font-press-start-2p">About GoFundDream</h1>
+          <h1 className="text-2xl font-bold text-gray-900 mb-6 font-press-start-2p">关于梦想众筹</h1>
           
           <div className="prose prose-blue max-w-none">
             <p className="text-lg text-gray-700 mb-6">
-              GoFundDream is a decentralized platform that connects dreamers with supporters. 
-              Our mission is to help people fund their dreams and turn them into reality through 
-              the power of blockchain technology and community support.
+              梦想众筹是一个去中心化平台，连接梦想家与支持者。
+              我们的使命是通过区块链技术和社区支持，帮助人们为梦想筹集资金并将其变为现实。
             </p>
             
-            <h2 className="text-lg font-semibold text-gray-800 mt-8 mb-4 font-press-start-2p">How It Works</h2>
+            <h2 className="text-lg font-semibold text-gray-800 mt-8 mb-4 font-press-start-2p">运作方式</h2>
             
             <p className="text-gray-700 mb-4">
-              GoFundDream leverages Binance Smart Chain (BSC) technology to create a transparent, 
-              secure, and efficient funding platform. Here's how it works:
+              梦想众筹利用币安智能链（BSC）技术创建透明、安全和高效的筹资平台。以下是运作方式：
             </p>
             
             <ol className="list-decimal pl-6 mb-6 space-y-2 text-gray-700">
               <li>
-                <strong>Connect Your Wallet</strong>: Use MetaMask to connect your BSC wallet to our platform.
+                <strong>连接钱包</strong>：使用MetaMask将您的BSC钱包连接到我们的平台。
               </li>
               <li>
-                <strong>Create a Dream</strong>: Share your vision with the community by creating a detailed dream proposal.
+                <strong>创建梦想</strong>：通过创建详细的梦想提案，与社区分享您的愿景。
               </li>
               <li>
-                <strong>Receive Funding</strong>: Supporters can contribute BNB directly to your dream.
+                <strong>接收资金</strong>：支持者可以直接向您的梦想贡献BNB。
               </li>
               <li>
-                <strong>Make It Happen</strong>: Use the funds to bring your dream to life.
+                <strong>实现梦想</strong>：使用筹集的资金将您的梦想变为现实。
               </li>
             </ol>
             
-            <h2 className="text-lg font-semibold text-gray-800 mt-8 mb-4 font-press-start-2p">Our Vision</h2>
+            <h2 className="text-lg font-semibold text-gray-800 mt-8 mb-4 font-press-start-2p">我们的愿景</h2>
             
             <p className="text-gray-700 mb-6">
-              We believe that everyone deserves the opportunity to pursue their dreams. 
-              By removing traditional barriers to funding and creating a direct connection 
-              between dreamers and supporters, we're building a more inclusive and 
-              accessible financial ecosystem.
+              我们相信每个人都应该有机会追求自己的梦想。
+              通过消除传统筹资障碍，创建梦想家与支持者之间的直接联系，
+              我们正在构建一个更具包容性和可访问性的金融生态系统。
             </p>
             
-            <h2 className="text-lg font-semibold text-gray-800 mt-8 mb-4 font-press-start-2p">Security & Transparency</h2>
+            <h2 className="text-lg font-semibold text-gray-800 mt-8 mb-4 font-press-start-2p">安全与透明</h2>
             
             <p className="text-gray-700 mb-6">
-              All transactions on GoFundDream are recorded on the Binance Smart Chain (BSC), 
-              ensuring complete transparency and security. Your wallet is your identity, 
-              and you maintain full control of your funds at all times.
+              梦想众筹上的所有交易都记录在币安智能链（BSC）上，
+              确保完全透明和安全。您的钱包是您的身份，
+              您始终保持对资金的完全控制。
             </p>
             
             <div className="bg-blue-50 p-6 rounded-lg mt-8">
-              <h3 className="text-base font-medium text-blue-800 mb-2 font-press-start-2p">Join Our Community</h3>
+              <h3 className="text-base font-medium text-blue-800 mb-2 font-press-start-2p">加入我们的社区</h3>
               <p className="text-blue-700">
-                Whether you're a dreamer looking for support or someone who wants to help 
-                others achieve their goals, GoFundDream welcomes you. Connect your wallet 
-                today and become part of our growing community.
+                无论您是寻求支持的梦想家，还是想要帮助他人实现目标的人，
+                梦想众筹欢迎您。立即连接您的钱包，成为我们不断壮大的社区的一部分。
               </p>
             </div>
           </div>

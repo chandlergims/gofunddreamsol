@@ -3,35 +3,35 @@
 const GrantsSection = () => {
   // Array of teams we're seeking grants from
   const teams = [
-    { name: 'CTD Foundation', logo: '/CTD.png', description: 'Seeking a grant to showcase our platform on Chain Talk Daily.' },
-    { name: 'TUT Foundation', logo: '/tut.jpg', description: 'Collaborating on innovative funding solutions for dreams.' },
-    { name: 'BUB Art Collective', logo: '/bub.jpg', description: 'Seeking artistic collaborations to create visuals tailored towards funding dreams on our platform.' },
+    { name: 'CTD Foundation', logo: '/CTD.png', description: '寻求资助，在Chain Talk Daily上展示我们的平台。' },
+    { name: 'TUT Foundation', logo: '/tut.jpg', description: '合作开发创新的梦想资金解决方案。' },
+    { name: 'BUB Art Collective', logo: '/bub.jpg', description: '寻求艺术合作，为我们平台上的梦想资金创建定制视觉效果。' },
   ];
 
   return (
     <div className="bg-white border border-gray-100 rounded-xl shadow-md p-4 mb-8 overflow-hidden">
-      <h2 className="text-lg font-bold text-gray-900 mb-4 font-press-start-2p">Partnerships & Grants</h2>
+      <h2 className="text-lg font-bold text-gray-900 mb-4 font-press-start-2p">合作与资助</h2>
       
       <div className="mb-6 overflow-hidden">
         <p className="text-gray-700 mb-4 text-sm break-words">
-          At GoFundDream, we're actively seeking grants and collaborations with successful foundations on the BSC chain. 
-          Our goal is to bring more visibility to our project and integrate our platform into their existing ecosystems.
+          在梦想众筹，我们正在积极寻求与BSC链上成功基金会的资助和合作。
+          我们的目标是提高项目的知名度，并将我们的平台整合到他们现有的生态系统中。
         </p>
         <p className="text-gray-700 mb-4 text-sm break-words font-medium">
-          Any team that accepts grants will receive a percentage of our token supply as part of our partnership program.
+          任何接受资助的团队都将获得我们代币供应的一定比例，作为合作计划的一部分。
         </p>
         <p className="text-gray-700 mb-4 text-sm break-words">
-          Our key focus areas include:
+          我们的重点关注领域包括：
         </p>
         <ul className="list-disc pl-5 text-gray-700 mb-4 text-sm">
-          <li className="mb-2 break-words">Integrating our platform into partner websites</li>
-          <li className="mb-2 break-words">Cross-promotion to bring eyes to our BSC-based project</li>
-          <li className="mb-2 break-words">Developing joint initiatives on the BSC blockchain</li>
-          <li className="mb-2 break-words">Creating sustainable funding mechanisms for dreams</li>
+          <li className="mb-2 break-words">将我们的平台整合到合作伙伴网站</li>
+          <li className="mb-2 break-words">交叉推广，为我们基于BSC的项目吸引关注</li>
+          <li className="mb-2 break-words">在BSC区块链上开发联合倡议</li>
+          <li className="mb-2 break-words">为梦想创建可持续的资金机制</li>
         </ul>
       </div>
       
-      <h3 className="text-sm font-semibold text-gray-800 mb-4 font-press-start-2p">Teams We're Seeking Grants From</h3>
+      <h3 className="text-sm font-semibold text-gray-800 mb-4 font-press-start-2p">我们正在寻求资助的团队</h3>
       
       <div className="space-y-4 max-h-60 overflow-y-auto pr-2 overflow-x-hidden">
         {teams.map((team, index) => (
